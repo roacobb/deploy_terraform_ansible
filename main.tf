@@ -224,7 +224,7 @@ resource "aws_security_group" "wp_dev_sg" {
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_block = ["var.localip"]
+    cidr_blocks = ["var.localip"]
   }
 
   #HTTP
@@ -233,14 +233,14 @@ resource "aws_security_group" "wp_dev_sg" {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_block = ["var.localip"]
+    cidr_blocks = ["var.localip"]
   }
 
   egress {
     from_port = 0
     to_port = 0
     protocol = "-1"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
@@ -257,14 +257,14 @@ resource "aws_security_group" "wp_public_sg" {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
     from_port = 0
     to_port = 0
     protocol = "-1"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
@@ -281,13 +281,13 @@ resource "aws_security_group" "wp_private_sg" {
     from_port = 0
     to_port = 0
     protocol = "-1"
-    cidr_block = ["${var.vpc_cidr}"]
+    cidr_blocks = ["${var.vpc_cidr}"]
   }
   egress {
     from_port = 0
     to_port = 0
     protocol = "-1"
-    cidr_block = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
