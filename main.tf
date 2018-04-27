@@ -216,7 +216,7 @@ resource "aws_route_table_association" "wp_private2_assoc" {
 resource "aws_security_group" "wp_dev_sg" {
   name = "wp_dev_sg"
   description = "Used for access to the dev instance"
-  vpc_id = "${aws_vpc.wp_vpc.id"
+  vpc_id = "${aws_vpc.wp_vpc.id}"
 
   #SSH
 
