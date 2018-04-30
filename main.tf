@@ -322,7 +322,7 @@ resource "aws_vpc_endpoint" "wp_private-s3_endpoint" {
     "${aws_route_table.wp_public_rt.id}"
   ]
 
-  policy = << POLICY
+  policy = <<POLICY
 {
   "Version": "2012-10-17",
   "Statement": [
