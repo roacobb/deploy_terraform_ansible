@@ -324,15 +324,15 @@ resource "aws_vpc_endpoint" "wp_private-s3_endpoint" {
 
   policy = << POLICY
 {
-    "Version": "2012-10-17", 
-    "Statement": [
-        {
-            "Action": "*",
-            "Effect": "Allow",
-            "Resource": "*",
-            "Principal": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "*",
+      "Effect": "Allow",
+      "Resource": "*",
+      "Principal": "*"
+    }
+  ]
 }
 POLICY
 }
