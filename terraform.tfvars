@@ -10,9 +10,9 @@ cidrs       = {
   rds2     = "10.0.6.0/24"
   rds3     = "10.0.7.0/24"
 } 
-localip = "54.201.224.15/32"
+localip = "35.160.120.13/32"
 domain_name = "rodneycobb"
 db_instance_class = "db.t2.mirco"
-db_name = "tanisdb"
-db_user = "tanis"
-db_password = "tanispass"
+dbname = "tanisdb"
+dbuser = "tanis"
+dbpassword = "tanispass"
