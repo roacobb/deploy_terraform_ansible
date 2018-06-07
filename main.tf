@@ -457,7 +457,7 @@ resource "aws_ami_from_instance" "wp_golden" {
   source_instance_id = "${aws_instance.wp_dev.id}"
 
   provisioner "local-exec" {
-    command = << EOF
+    command = <<EOF
 cat <<EOF > userdata
 #!/bin/bash
 /usr/bin/aws s3 sync s3://${aws_s3_bucket.code.bucket} /var/www/html/
