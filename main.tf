@@ -543,7 +543,7 @@ resource "aws_route53_record" "dev" {
   name = "dev.${var.domain_name}.com"
   type = "A"
   ttl = "300"
-  records = ["${aws_instance.wp_dev_public_ip}"]
+  records = ["${aws_instance.wp_dev.public_ip}"]
 }
 
 #Private
