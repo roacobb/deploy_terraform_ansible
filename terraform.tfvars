@@ -11,7 +11,7 @@ cidrs       = {
   rds3     = "10.0.7.0/24"
 } 
 localip = "54.149.64.62/32"
-domain_name = "tracifordc.com"
+domain_name = "tracifordc"
 db_instance_class = "db.t2.mirco"
 dbname = "tanisdb"
 dbuser = "tanis"
