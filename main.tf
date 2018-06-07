@@ -518,7 +518,7 @@ resource "aws_autoscaling_group" "wp_asg" {
 # Primary Zone 
 
 resource "aws_route53_zone" "primary" {
-  name = "${aws.domain_name}.com"
+  name = "${var.domain_name}.com"
   delegation_set_id = "${var.delegation_set}"
 }
 
