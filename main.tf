@@ -410,7 +410,7 @@ EOF
 #-------------- ELB ----------------
 
 resource "aws_elb" "wp_elb" {
-  name = "${var.domain_name}"-elb
+  name = "${var.domain_name}-elb"
 
   subnets = ["${aws_subnet.wp_public1_subnet.id}", "${aws_subnet.wp_public2_subnet.id}"]
 
