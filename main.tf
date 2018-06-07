@@ -560,7 +560,7 @@ resource "aws_route53_record" "db" {
   name = "db.${var.domain_name}.com"
   type = "CNAME"
   ttl = "300"
-  records = ["${aws_db)instance.wp_db.address}"]
+  records = ["${aws_db_instance.wp_db.address}"]
 }
 
 
