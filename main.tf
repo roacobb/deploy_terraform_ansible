@@ -388,7 +388,7 @@ resource "aws_instance" "wp_dev" {
 
   key_name = "${aws_key_pair.wp_auth.id}"
   vpc_security_group_ids = ["${aws_security_group.wp_dev_sg.id}"]
-  aws_iam_instance_profile = "${aws_iam_instance_profile.s3_access_profile.id}"
+  iam_instance_profile = "${aws_iam_instance_profile.s3_access_profile.id}"
   subnet_id = "${aws_subnet.wp_public1_subnet.id}"
 
   provisioner "local-exec" {
