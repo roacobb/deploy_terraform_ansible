@@ -393,9 +393,21 @@ resource "aws_instance" "wp_dev" {
 
   provisioner "local-exec" {
     command = <<EOD
-    
+cat <<EOF > aws_hosts
+[dev]
+${aws_instance.wp_dev.public.ip}
+[dev:vars]
+s3code=${aws_s3_bucket.code.bucket}
+domain=${var.domain.name}
+EOF
+EOD 
+  }
+
+  provisioner "local-exec" {
+    command = "aws ec2 wait instance-status-ok --instance-ids ${aws_instance.wp_dev.id} --profile tanis && ansible-playbook -i aws_hosts wordpress.yml"
   }
 }
+
 
 
 
