@@ -392,7 +392,7 @@ resource "aws_instance" "wp_dev" {
   subnet_id = "${aws_subnet.wp_public1_subnet.id}"
 
   provisioner "local-exec" {
-    command = <<-EOD
+    command = <<EOD
 cat <<-EOF > aws_hosts
 [dev]
 ${aws_instance.wp_dev.public.ip}
