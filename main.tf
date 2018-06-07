@@ -426,7 +426,7 @@ resource "aws_elb" "wp_elb" {
   health_check {
     healthy_threshold = "${var.elb_healthy_threshold}"
     unhealthy_threshold = "${var.elb_unhealthy_threshold}"
-    timeout = "${var.elb.timeout}"
+    timeout = "${var.elb_timeout}"
     target = "TCP:80"
     interval = "${var.elb_interval}"
   }
