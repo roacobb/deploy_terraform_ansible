@@ -398,7 +398,7 @@ cat <<EOF > aws_hosts
 ${aws_instance.wp_dev.public.ip}
 [dev:vars]
 s3code=${aws_s3_bucket.code.bucket}
-domain=${var.domain.name}
+domain=${var.domain_name}
 EOF
   }
 
