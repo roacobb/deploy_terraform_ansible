@@ -12,7 +12,7 @@ cidrs       = {
 } 
 localip = "54.149.64.62/32"
 domain_name = "tracifordc"
-db_instance_class = "db.t2.mirco"
+db_instance_class = "db.t2.micro"
 dbname = "tanisdb"
 dbuser = "tanis"
 dbpassword = "tanispass"
