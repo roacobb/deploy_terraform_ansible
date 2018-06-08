@@ -258,7 +258,7 @@ resource "aws_security_group" "wp_public_sg" {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["73.135.184.74/32"]
   }
 
   egress {
