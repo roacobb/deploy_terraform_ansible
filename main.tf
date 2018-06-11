@@ -258,7 +258,7 @@ resource "aws_security_group" "wp_public_sg" {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_blocks = ["73.135.184.74/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
@@ -463,7 +463,7 @@ cat <<EOF > userdata
 #!/bin/bash
 /usr/bin/aws s3 sync s3://${aws_s3_bucket.code.bucket} /var/www/html/
 /bin/touch /var/spool/cron/root 
-sudo /bin/echo '*/5 * * * * aws s3 sync s3://${aws_s3_bucket.code.bucket} /var/www/html' >> /var/spool/cron/root
+sudo /bin/echo '*/5 * * * * aws s3 sync s3://${aws_s3_bucket.code.bucket} /var/www/html/' >> /var/spool/cron/root
 EOF
   }
 }
