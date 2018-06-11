@@ -4,7 +4,7 @@
   remote_user: ec2-user
   tasks:
     - name: Install Apache.
-      yum ={{ item }} state=present
+      yum: name={{ item }} state=present
       with_items:
       - httpd
       - php
