@@ -5,9 +5,9 @@
   tasks:
   - name: Update S3 code bucket
     command: aws s3 sync /var/www/html/ s3://{{ s3code }}/ --delete
-  - shell: echo "define('SITEURL','http:dev."{{ domain }}".com');" >> config.php
+  - shell: echo "define('SITEURL','http:dev."{{ domain }}".com');" >> index.html
     args:
       chdir: /var/www/html/
-  - shell: echo "define('HOME','http://dev."{{ domain }}".com');" >> congfig.php
+  - shell: echo "define('HOME','http://dev."{{ domain }}".com');" >> index.html
     args:
       chdir: /var/www/html/
