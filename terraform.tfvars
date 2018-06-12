@@ -10,7 +10,7 @@ cidrs       = {
   rds2     = "10.0.6.0/24"
   rds3     = "10.0.7.0/24"
 } 
-localip = "54.42.211.45/32"
+localip = "34.214.201.85/32"
 domain_name = "tracifordc"
 db_instance_class = "db.t2.micro"
 dbname = "tanisdb"
